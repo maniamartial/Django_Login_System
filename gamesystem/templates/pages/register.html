@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+  
+    <form method="POST" action="">
+        {%csrf_token%}
+<h1>
+    Register
+</h1>
+<div class="wrap">
+<div> {{form.first_name}}</div>
+    <div>{{form.last_name}}</div>
+<div>{{form.username}}</div>
+<div>{{form.email}}</div>
+<div> {{form.password1}}</div>
+    <div> {{form.password2}}</div>
+    <div><input type="submit" name="Register"></div>
+    {{form.errors}}
+        
+    </div>
+<div class="account"><i>Don't have an account?<a href="{% url 'register' %}">Sign up</a></i></div>
+</div>
+    </form>
+    <style>
+
+          body{
+              background-color: black;
+            text-align: center;
+            padding-top: 5%;
+            color: white;
+            align-items: center;
+            justify-content: center;
+        }
+        
+    
+        form {
+            background-color: greenyellow;
+               background-color: rgb(195, 222, 231);
+            width: 50%;
+            max-width: 600px;
+            height: 600px;
+            margin-left: 25%;
+            margin-right: 20%;
+        }
+    
+        .wrap input {
+            margin-top: 20px;
+            width: 200px;
+            height: 30px;
+        }
+         .account{
+            color: black;
+            margin-top: 10px;
+        }
+        .account a{
+            color: blue;
+            font-size: 20px;
+        }
+          @media(max-width:760px){
+ form{
+            background-color: lightblue;
+            width: 80%;
+            
+            margin-left: 10%;
+            margin-right: 5%;
+        }
+   
+        }
+        </style>
+
+        <script>
+            var form_fields=document.getElementsByTagName('input');
+            form_fields[1].placeholder='Firstname...';
+             form_fields[2].placeholder = 'Lastname...';
+              form_fields[3].placeholder = 'Username...';
+               form_fields[4].placeholder = 'Email...';
+                form_fields[5].placeholder = 'Password...';
+                 form_fields[6].placeholder = 'Re-enter Password...';
+                 
+                 for(var field in form_fields){
+                     form_fields[field].className+='form-control'
+                 }
+        </script>
+</body>
+</html>

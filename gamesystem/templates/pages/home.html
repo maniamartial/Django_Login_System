@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+<body>
+    {%csrf_token%}
+    <h1>Welcome{username}</h1>
+    <h4>I know you like Mania, right</h4>
+    <h4>Welcome to the <i>dark World</i></h4>
+<h5>Take care of your information</h5>
+<p><a href="{% url 'login' %}">Logout</a></p>
+    <style>
+        body{
+            background-color: black;
+            text-align: center;
+            padding-top: 20%;
+        }
+        h1{
+            color: red;
+        }
+        h4{
+            color: white;
+        }
+        h5{
+            color: white;
+        }
+        p a{
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h4 i{
+            color: red;
+            font-size: 35px;
+        }
+    </style>
+</body>
+</html>

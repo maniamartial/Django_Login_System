@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body>
+   
+    <form method="POST" action="">
+        {%csrf_token%}
+        <h1>
+            Login
+        </h1>
+        <div class="wrap">
+           
+        <div>   <input type="text" name="username"></div>
+            <div><input type="password" name="password"></div>
+            <div> <input type="submit" name="Register"></div>
+            <div class="marg">
+                <input class="check" type="checkbox"><span class="rem">Remember me</span>
+                <diV><a href="#">Forgotten password</a></diV>
+            </div>
+            <div class="account"><i>Don't have an account?<a href="{% url 'register' %}">Sign up</a></i></div>
+        </div>
+    </form>
+
+    <style>
+           body{
+            background-color: black;
+            text-align: center;
+            padding-top: 10%;
+            color: white;
+            align-items: center;
+            justify-content: center;
+        }
+        form{
+            background-color: rgb(195, 222, 231);
+            width: 50%;
+            max-width: 600px;
+            height: 400px;
+            margin-left: 25%;
+            margin-right: 20%;
+        }
+        .wrap input{
+margin-top: 20px;
+ width: 200px;
+            height: 30px;
+        }
+        .check{
+            background-color: red;
+            margin-left: -22%;
+        }
+        .account{
+            color: black;
+            margin-top: 10px;
+        }
+        .account a{
+            color: blue;
+            font-size: 20px;
+        }
+        .rem{
+            margin-left: -26%;
+        }
+        @media(max-width:760px){
+ form{
+            background-color: lightblue;
+            width: 80%;
+            height: 400px;
+            margin-left: 10%;
+            margin-right: 5%;
+        }
+   
+        }
+    </style>
+</body>
+
+</html>
